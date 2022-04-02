@@ -25,7 +25,6 @@ control_x_mean = -15
 
 np.random.seed(1)
 x_treated = np.random.normal(loc=treated_x_mean, scale=10, size=treated_n)
-ps_treated = np.clip(np.random.normal(loc=0.75, scale=0.25, size=treated_n), 0.01, 0.99)
 treated = pd.DataFrame(
     {
         "x": x_treated,
@@ -33,7 +32,6 @@ treated = pd.DataFrame(
 )
 
 x_control = np.random.normal(loc=control_x_mean, scale=10, size=control_n)
-ps_control = np.clip(np.random.normal(loc=0.25, scale=0.5, size=control_n), 0.01, 0.99)
 control = pd.DataFrame(
     {
         "x": x_control,
