@@ -156,8 +156,9 @@ _weight = (
 
 st.write(f"### ATT : {att :.2f}")
 st.write(f"### ATU : {atu :.2f}")
-st.write(f"### weight : {_weight :.2f}")
-st.write(f"## theoretical value : {att*_weight + atu*(1-_weight)}")
+st.write(f"### theoretical weight? : {_weight :.2f}")
+st.write(f"## theoretical value? : {att*_weight + atu*(1-_weight):.2f}")
+st.write(f"### weight : {(estemated_effect-atu)/(att-atu) :.2f}")
 
 fig.add_annotation(
     x=t1avg,
